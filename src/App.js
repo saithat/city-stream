@@ -1,23 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import EventListItem from './EventListItem';
+import { Navbar } from 'react-bootstrap';
 
 function App() {
   return (
     <div className="App">
+      <Navbar bg="light" expand="lg">
+        <Navbar.Brand>CityStream 865 - Live in your area</Navbar.Brand>
+      </Navbar>
+
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ul>
+          <EventListItem
+            eventName='KNXHX Knoxville City Hackathon' 
+            eventDate='July 18th, 2020'/>
+          <EventListItem
+            eventName='Another Event' 
+            eventDate='December 25, 2020'/>
+          <EventListItem
+            eventName='Another event' 
+            eventDate='April 24, 2021'/>
+        </ul>
       </header>
     </div>
   );
