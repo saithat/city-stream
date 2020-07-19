@@ -10,7 +10,7 @@ import {
   params,
   useParams
 } from "react-router-dom";
-import player from "./embedVideo";
+import Player from "./embedVideo";
 
 const vids = [
   {id: 0, link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"},
@@ -21,7 +21,7 @@ const vids = [
 class StreamGallery extends React.Component {
   render() {
     return (
-      <player url={vids[this.props.match.params.ID].link} />
+      <Player url={vids[this.props.match.params.ID].link} />
     );
   }
 }
