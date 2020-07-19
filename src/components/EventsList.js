@@ -9,6 +9,7 @@ import {
   useParams
 } from "react-router-dom";
 import EventListItem from '../EventListItem';
+import './EventsList.css'
 
 const tmpEvents = [
     {id: 0, name:'KNXHX Knoxville City Hackathon', date:'July 18th, 2020'},
@@ -19,7 +20,7 @@ const tmpEvents = [
 export default function EventsList() {
     return (
         <header className="App-header">
-        <div>
+        <div className="event-list">
             <ul>
                 {tmpEvents.map(i => (
                     <Link

@@ -27,8 +27,9 @@ function SwitchView() {
 function App() {
   return (
     <div className="App">
-      <Navbar bg="light" expand="lg">
-        <Navbar.Brand>CityStream 865 - Live in your area</Navbar.Brand>
+      <Navbar className='header-bar'
+        expand="lg" variant="dark">
+        <Navbar.Brand><strong>CityStream 865</strong> - Live in your area</Navbar.Brand>
       </Navbar>
       <Router>
         <SwitchView />

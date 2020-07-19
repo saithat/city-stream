@@ -1,0 +1,11 @@
+.EventListItem {
+    margin: 20px;
+    background-color: white;
+    color: #333333;
+    text-align: left;
+    min-width: 50em;
+  }
+  
+  .EventListItemDate {
+    color: #555555;
+  }
