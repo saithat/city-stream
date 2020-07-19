@@ -1,7 +1,28 @@
 import React, { useState } from 'react';
 import './App.css';
-import EventListItem from './EventListItem';
+import EventsList from './components/EventsList';
+import StreamGallery from './components/StreamGallery';
 import { Navbar } from 'react-bootstrap';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useHistory,
+  useLocation,
+  useParams
+} from "react-router-dom";
+
+function SwitchView() {
+  return (
+    <div>
+      <Switch>
+        <Route path="/:ID" component={StreamGallery} />
+        <Route path="/" component={EventsList} />
+      </Switch>
+    </div>
+  )
+}
 
 function App() {
   return (
@@ -9,20 +30,9 @@ function App() {
       <Navbar bg="light" expand="lg">
         <Navbar.Brand>CityStream 865 - Live in your area</Navbar.Brand>
       </Navbar>
-
-      <header className="App-header">
-        <ul>
-          <EventListItem
-            eventName='KNXHX Knoxville City Hackathon' 
-            eventDate='July 18th, 2020'/>
-          <EventListItem
-            eventName='Another Event' 
-            eventDate='December 25, 2020'/>
-          <EventListItem
-            eventName='Another event' 
-            eventDate='April 24, 2021'/>
-        </ul>
-      </header>
+      <Router>
+        <SwitchView />
+      </Router>
     </div>
   );
 }
