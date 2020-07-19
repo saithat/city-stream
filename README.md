@@ -5,6 +5,10 @@
 
 This app was developed by Sai Thatigotla, Spencer Howell, Manny Bhidya, and Fatima Bhidya.
 
+## Screenshots
+![Event List Page](/docs/updated-event-list.png)
+![Live Stream Page](/docs/stream865-livestream.png)
+
 ## Build and Run
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
