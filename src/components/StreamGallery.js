@@ -11,6 +11,9 @@ import {
   useParams
 } from "react-router-dom";
 import Player from "./embedVideo";
+import "./StreamGallery.css";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
 const vids = [
   {id: 0, link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"},
@@ -21,7 +24,14 @@ const vids = [
 class StreamGallery extends React.Component {
   render() {
     return (
-      <Player url={vids[this.props.match.params.ID].link} />
+      <div class="stream-gallery">
+        <Player url={vids[this.props.match.params.ID].link} />
+        <br></br>
+        <Card style={{ padding: '20px', width: '50em' }}>
+          <Card.Title>Add a Livestream</Card.Title>
+          <Button variant="primary">Start streaming</Button>
+        </Card>
+      </div>
     );
   }
 }

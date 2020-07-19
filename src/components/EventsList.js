@@ -9,7 +9,7 @@ import {
   useParams
 } from "react-router-dom";
 import EventListItem from '../EventListItem';
-import './EventsList.css'
+import './EventsList.css';
 
 const tmpEvents = [
     {id: 0, name:'KNXHX Knoxville City Hackathon', date:'July 18th, 2020'},
