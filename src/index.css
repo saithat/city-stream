@@ -12,19 +12,3 @@ code {
     monospace;
 }
 
-.EventListItem {
-  padding: 20px;
-  margin: 20px;
-  background-color: white;
-  color: #333333;
-  text-align: left;
-}
-
-.EventListItemTitle {
-  font-size: 30px;
-}
-
-.EventListItemDate {
-  font-size: 20px;
-  color: #555555;
-}
